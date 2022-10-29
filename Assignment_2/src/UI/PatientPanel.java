@@ -14,7 +14,7 @@ import model.SystemAdmin;
 
 /**
  *
- * @author adityaraj
+ * @author DELL
  */
 public class PatientPanel extends javax.swing.JPanel {
 

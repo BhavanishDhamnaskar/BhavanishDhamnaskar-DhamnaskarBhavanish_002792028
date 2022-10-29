@@ -15,7 +15,7 @@ import model.SystemAdmin;
 
 /**
  *
- * @author adityaraj
+ * @author DELL
  */
 public class CreateDoctorPanel1 extends javax.swing.JPanel {
 

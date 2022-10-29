@@ -17,13 +17,13 @@ import model.SystemAdmin;
  *
  * @author DELL
  */
-public class CreateDoctorPanel extends javax.swing.JPanel {
+public class CreateDoctorPanel11 extends javax.swing.JPanel {
 
     /**
      * Creates new form CreateDoctorPanel
      */
     SystemAdmin sysAdmin;
-    public CreateDoctorPanel(SystemAdmin sysAdmin) {
+    public CreateDoctorPanel11(SystemAdmin sysAdmin) {
         initComponents();
         this.sysAdmin = sysAdmin;
         populateHospitals();

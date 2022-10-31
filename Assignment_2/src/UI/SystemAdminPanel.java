@@ -49,6 +49,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         txtSystemAdminUsername = new javax.swing.JTextField();
         txtSystemAdminPassword = new javax.swing.JPasswordField();
         btnSystemAdminLogin = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jSplitPaneHospitalAdmin = new javax.swing.JSplitPane();
         controlPanelSystemAdmin = new javax.swing.JPanel();
         btnHospitlaDirectory = new javax.swing.JButton();
@@ -83,11 +84,27 @@ public class SystemAdminPanel extends javax.swing.JPanel {
 
         setLayout(new java.awt.CardLayout());
 
+        hospitalAdminLoginPanel.setBackground(new java.awt.Color(153, 153, 255));
+        hospitalAdminLoginPanel.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("System Admin Login");
+        hospitalAdminLoginPanel.add(jLabel1);
+        jLabel1.setBounds(284, 71, 190, 25);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Username");
+        hospitalAdminLoginPanel.add(jLabel2);
+        jLabel2.setBounds(199, 191, 80, 20);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Password");
+        hospitalAdminLoginPanel.add(jLabel3);
+        jLabel3.setBounds(196, 247, 80, 20);
+        hospitalAdminLoginPanel.add(txtSystemAdminUsername);
+        txtSystemAdminUsername.setBounds(319, 185, 150, 22);
+        hospitalAdminLoginPanel.add(txtSystemAdminPassword);
+        txtSystemAdminPassword.setBounds(319, 241, 150, 22);
 
         btnSystemAdminLogin.setText("Login");
         btnSystemAdminLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -95,47 +112,13 @@ public class SystemAdminPanel extends javax.swing.JPanel {
                 btnSystemAdminLoginActionPerformed(evt);
             }
         });
+        hospitalAdminLoginPanel.add(btnSystemAdminLogin);
+        btnSystemAdminLogin.setBounds(285, 317, 72, 23);
 
-        javax.swing.GroupLayout hospitalAdminLoginPanelLayout = new javax.swing.GroupLayout(hospitalAdminLoginPanel);
-        hospitalAdminLoginPanel.setLayout(hospitalAdminLoginPanelLayout);
-        hospitalAdminLoginPanelLayout.setHorizontalGroup(
-            hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(226, 226, 226)
-                        .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(40, 40, 40)
-                        .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtSystemAdminUsername)
-                            .addComponent(txtSystemAdminPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                    .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(285, 285, 285)
-                        .addComponent(btnSystemAdminLogin))
-                    .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(284, 284, 284)
-                        .addComponent(jLabel1)))
-                .addContainerGap(295, Short.MAX_VALUE))
-        );
-        hospitalAdminLoginPanelLayout.setVerticalGroup(
-            hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jLabel1)
-                .addGap(98, 98, 98)
-                .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(txtSystemAdminUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(txtSystemAdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(btnSystemAdminLogin)
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
+        jLabel4.setBackground(new java.awt.Color(51, 102, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\DELL\\Downloads\\Hospital-Management-System-Software-(HMS).jpg")); // NOI18N
+        hospitalAdminLoginPanel.add(jLabel4);
+        jLabel4.setBounds(0, 0, 1060, 690);
 
         add(hospitalAdminLoginPanel, "hospitalAdminLoginPanel");
 
@@ -182,7 +165,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
                 .addComponent(btnPatientDirectory)
                 .addGap(34, 34, 34)
                 .addComponent(btnEncountersDirectory)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(289, Short.MAX_VALUE))
         );
         controlPanelSystemAdminLayout.setVerticalGroup(
             controlPanelSystemAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -234,7 +217,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
                 .addComponent(btnCreateHospital)
                 .addGap(52, 52, 52)
                 .addComponent(btnViewHospital)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(350, Short.MAX_VALUE))
         );
 
         jSplitPaneHospitalDirectory.setLeftComponent(controlPanelHospitalDirectory);
@@ -243,11 +226,11 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         viewPanelHospitalDirectory.setLayout(viewPanelHospitalDirectoryLayout);
         viewPanelHospitalDirectoryLayout.setHorizontalGroup(
             viewPanelHospitalDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 625, Short.MAX_VALUE)
+            .addGap(0, 908, Short.MAX_VALUE)
         );
         viewPanelHospitalDirectoryLayout.setVerticalGroup(
             viewPanelHospitalDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 328, Short.MAX_VALUE)
+            .addGap(0, 605, Short.MAX_VALUE)
         );
 
         jSplitPaneHospitalDirectory.setRightComponent(viewPanelHospitalDirectory);
@@ -256,13 +239,13 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         hospitalDirectoryPanel.setLayout(hospitalDirectoryPanelLayout);
         hospitalDirectoryPanelLayout.setHorizontalGroup(
             hospitalDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPaneHospitalDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE)
+            .addComponent(jSplitPaneHospitalDirectory)
         );
         hospitalDirectoryPanelLayout.setVerticalGroup(
             hospitalDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hospitalDirectoryPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPaneHospitalDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE))
+                .addComponent(jSplitPaneHospitalDirectory))
         );
 
         viewPanelSystemAdmin.add(hospitalDirectoryPanel, "hospitalDirectoryPanel");
@@ -299,7 +282,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
                 .addComponent(btnAddDoctor)
                 .addGap(49, 49, 49)
                 .addComponent(btnViewDoctors)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(332, Short.MAX_VALUE))
         );
 
         jSplitPaneDoctorsDirectory.setLeftComponent(controlPanelDoctorsDirectory);
@@ -308,11 +291,11 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         viewPanelDoctorsDirectory.setLayout(viewPanelDoctorsDirectoryLayout);
         viewPanelDoctorsDirectoryLayout.setHorizontalGroup(
             viewPanelDoctorsDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 635, Short.MAX_VALUE)
+            .addGap(0, 918, Short.MAX_VALUE)
         );
         viewPanelDoctorsDirectoryLayout.setVerticalGroup(
             viewPanelDoctorsDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 328, Short.MAX_VALUE)
+            .addGap(0, 605, Short.MAX_VALUE)
         );
 
         jSplitPaneDoctorsDirectory.setRightComponent(viewPanelDoctorsDirectory);
@@ -323,14 +306,14 @@ public class SystemAdminPanel extends javax.swing.JPanel {
             DoctorsDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DoctorsDirectoryPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPaneDoctorsDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 752, Short.MAX_VALUE)
+                .addComponent(jSplitPaneDoctorsDirectory)
                 .addContainerGap())
         );
         DoctorsDirectoryPanelLayout.setVerticalGroup(
             DoctorsDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DoctorsDirectoryPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPaneDoctorsDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE))
+                .addComponent(jSplitPaneDoctorsDirectory))
         );
 
         viewPanelSystemAdmin.add(DoctorsDirectoryPanel, "DoctorsDirectoryPanel");
@@ -367,7 +350,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
                 .addComponent(btnAddPatient)
                 .addGap(64, 64, 64)
                 .addComponent(btnViewPatient)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(332, Short.MAX_VALUE))
         );
 
         jSplitPanePatientDirectory.setLeftComponent(controlPanelPatientDirectroy);
@@ -376,11 +359,11 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         viewPanelPatientDirectroy.setLayout(viewPanelPatientDirectroyLayout);
         viewPanelPatientDirectroyLayout.setHorizontalGroup(
             viewPanelPatientDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 639, Short.MAX_VALUE)
+            .addGap(0, 922, Short.MAX_VALUE)
         );
         viewPanelPatientDirectroyLayout.setVerticalGroup(
             viewPanelPatientDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 328, Short.MAX_VALUE)
+            .addGap(0, 605, Short.MAX_VALUE)
         );
 
         jSplitPanePatientDirectory.setRightComponent(viewPanelPatientDirectroy);
@@ -391,14 +374,14 @@ public class SystemAdminPanel extends javax.swing.JPanel {
             PatientDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PatientDirectoryPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPanePatientDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 752, Short.MAX_VALUE)
+                .addComponent(jSplitPanePatientDirectory)
                 .addContainerGap())
         );
         PatientDirectoryPanelLayout.setVerticalGroup(
             PatientDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PatientDirectoryPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPanePatientDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE))
+                .addComponent(jSplitPanePatientDirectory))
         );
 
         viewPanelSystemAdmin.add(PatientDirectoryPanel, "PatientDirectoryPanel");
@@ -435,7 +418,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
                 .addComponent(btnAddEncounter)
                 .addGap(71, 71, 71)
                 .addComponent(btnViewEncounter)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(318, Short.MAX_VALUE))
         );
 
         jSplitPaneEncountersDirectory.setLeftComponent(controlPanelEncountersDirectory);
@@ -444,11 +427,11 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         viewPanelEncountersDirectory.setLayout(viewPanelEncountersDirectoryLayout);
         viewPanelEncountersDirectoryLayout.setHorizontalGroup(
             viewPanelEncountersDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 635, Short.MAX_VALUE)
+            .addGap(0, 918, Short.MAX_VALUE)
         );
         viewPanelEncountersDirectoryLayout.setVerticalGroup(
             viewPanelEncountersDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 334, Short.MAX_VALUE)
+            .addGap(0, 611, Short.MAX_VALUE)
         );
 
         jSplitPaneEncountersDirectory.setRightComponent(viewPanelEncountersDirectory);
@@ -457,11 +440,11 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         EncounterDirectoryPanel.setLayout(EncounterDirectoryPanelLayout);
         EncounterDirectoryPanelLayout.setHorizontalGroup(
             EncounterDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPaneEncountersDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE)
+            .addComponent(jSplitPaneEncountersDirectory)
         );
         EncounterDirectoryPanelLayout.setVerticalGroup(
             EncounterDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPaneEncountersDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
+            .addComponent(jSplitPaneEncountersDirectory)
         );
 
         viewPanelSystemAdmin.add(EncounterDirectoryPanel, "EncounterDirectoryPanel");
@@ -591,6 +574,7 @@ public class SystemAdminPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JSplitPane jSplitPaneDoctorsDirectory;
     private javax.swing.JSplitPane jSplitPaneEncountersDirectory;
     private javax.swing.JSplitPane jSplitPaneHospitalAdmin;

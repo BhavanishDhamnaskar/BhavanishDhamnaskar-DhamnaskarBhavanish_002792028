@@ -47,6 +47,7 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
         txtHospitalAdminUsername = new javax.swing.JTextField();
         txtHospitalAdminPassword = new javax.swing.JPasswordField();
         btnHospitalAdminLogin = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jSplitPaneHospitalAdmin = new javax.swing.JSplitPane();
         controlPanelHospitalAdmin = new javax.swing.JPanel();
         btnHospitlaDirectory = new javax.swing.JButton();
@@ -79,13 +80,33 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
         btnViewEncounter = new javax.swing.JButton();
         viewPanelEncountersDirectory = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new java.awt.CardLayout());
 
+        hospitalAdminLoginPanel.setBackground(new java.awt.Color(102, 204, 255));
+        hospitalAdminLoginPanel.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Hospital Admin Login");
+        hospitalAdminLoginPanel.add(jLabel1);
+        jLabel1.setBounds(210, 71, 260, 32);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username");
+        hospitalAdminLoginPanel.add(jLabel2);
+        jLabel2.setBounds(199, 191, 80, 20);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
+        hospitalAdminLoginPanel.add(jLabel3);
+        jLabel3.setBounds(196, 247, 80, 20);
+        hospitalAdminLoginPanel.add(txtHospitalAdminUsername);
+        txtHospitalAdminUsername.setBounds(319, 185, 150, 22);
+        hospitalAdminLoginPanel.add(txtHospitalAdminPassword);
+        txtHospitalAdminPassword.setBounds(319, 241, 150, 22);
 
         btnHospitalAdminLogin.setText("Login");
         btnHospitalAdminLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -93,47 +114,14 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
                 btnHospitalAdminLoginActionPerformed(evt);
             }
         });
+        hospitalAdminLoginPanel.add(btnHospitalAdminLogin);
+        btnHospitalAdminLogin.setBounds(285, 317, 72, 23);
 
-        javax.swing.GroupLayout hospitalAdminLoginPanelLayout = new javax.swing.GroupLayout(hospitalAdminLoginPanel);
-        hospitalAdminLoginPanel.setLayout(hospitalAdminLoginPanelLayout);
-        hospitalAdminLoginPanelLayout.setHorizontalGroup(
-            hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(226, 226, 226)
-                        .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(40, 40, 40)
-                        .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtHospitalAdminUsername)
-                            .addComponent(txtHospitalAdminPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                    .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(285, 285, 285)
-                        .addComponent(btnHospitalAdminLogin))
-                    .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                        .addGap(284, 284, 284)
-                        .addComponent(jLabel1)))
-                .addContainerGap(404, Short.MAX_VALUE))
-        );
-        hospitalAdminLoginPanelLayout.setVerticalGroup(
-            hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hospitalAdminLoginPanelLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jLabel1)
-                .addGap(98, 98, 98)
-                .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(txtHospitalAdminUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(hospitalAdminLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(txtHospitalAdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(btnHospitalAdminLogin)
-                .addContainerGap(383, Short.MAX_VALUE))
-        );
+        jLabel4.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\DELL\\Downloads\\hospital-management-system.jpg")); // NOI18N
+        jLabel4.setText("jLabel4");
+        hospitalAdminLoginPanel.add(jLabel4);
+        jLabel4.setBounds(0, -60, 890, 820);
 
         add(hospitalAdminLoginPanel, "hospitalAdminLoginPanel");
 
@@ -589,6 +577,7 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JSplitPane jSplitPaneDoctorsDirectory;
     private javax.swing.JSplitPane jSplitPaneEncountersDirectory;
     private javax.swing.JSplitPane jSplitPaneHospitalAdmin;

@@ -6,7 +6,9 @@ package ui;
 
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 import model.City;
 import model.SystemAdmin;
 
@@ -47,6 +49,8 @@ public class ViewCityPanel extends javax.swing.JPanel {
         btnSaveCity = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         txtCityId = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtSearchCity = new javax.swing.JTextField();
 
         jLabel1.setText("View City ");
 
@@ -90,6 +94,19 @@ public class ViewCityPanel extends javax.swing.JPanel {
 
         jLabel2.setText("City ID");
 
+        jLabel3.setText("Search City :");
+
+        txtSearchCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchCityActionPerformed(evt);
+            }
+        });
+        txtSearchCity.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtSearchCityKeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -124,7 +141,11 @@ public class ViewCityPanel extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtCityName)
                                     .addComponent(txtCityState, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                    .addComponent(txtCityId))))))
+                                    .addComponent(txtCityId))))
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel3)
+                        .addGap(33, 33, 33)
+                        .addComponent(txtSearchCity)))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -141,7 +162,11 @@ public class ViewCityPanel extends javax.swing.JPanel {
                 .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
-                    .addComponent(txtCityId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtSearchCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCityId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblCityName)
@@ -212,6 +237,18 @@ public class ViewCityPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnUpdateCityActionPerformed
 
+    private void txtSearchCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchCityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSearchCityActionPerformed
+
+    private void txtSearchCityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchCityKeyPressed
+        // TODO add your handling code here:
+        DefaultTableModel taleModel = (DefaultTableModel)tblCities.getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(taleModel);
+        tblCities.setRowSorter(tr);
+        tr.setRowFilter(RowFilter.regexFilter(txtSearchCity.getText().trim()));
+    }//GEN-LAST:event_txtSearchCityKeyPressed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSaveCity;
@@ -219,6 +256,7 @@ public class ViewCityPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnViewCity;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCityName;
     private javax.swing.JLabel lblCityState;
@@ -226,6 +264,7 @@ public class ViewCityPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtCityId;
     private javax.swing.JTextField txtCityName;
     private javax.swing.JTextField txtCityState;
+    private javax.swing.JTextField txtSearchCity;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {

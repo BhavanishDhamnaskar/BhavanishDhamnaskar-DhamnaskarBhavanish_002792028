@@ -213,8 +213,8 @@ public class DoctorPanel extends javax.swing.JPanel {
 
     private void btnViewVitalSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewVitalSignActionPerformed
         // TODO add your handling code here:
-        ViewVitalSignsPanel viewVitals = new ViewVitalSignsPanel(sysAdmin,d);
-        jSplitPaneDoctorPanel.setRightComponent(viewVitals);
+        ViewVitalSignsPanel viewvitals = new ViewVitalSignsPanel(sysAdmin,d);
+        jSplitPaneDoctorPanel.setRightComponent(viewvitals);
     }//GEN-LAST:event_btnViewVitalSignActionPerformed
 
 

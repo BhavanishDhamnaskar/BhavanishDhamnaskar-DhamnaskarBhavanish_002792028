@@ -48,6 +48,11 @@ public class DoctorPanelHome extends javax.swing.JPanel {
         jButton1.setText("Create Vital Signs");
 
         jButton2.setText("View Vital Signs");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout controlPanelDoctorLayout = new javax.swing.GroupLayout(controlPanelDoctor);
         controlPanelDoctor.setLayout(controlPanelDoctorLayout);
@@ -119,6 +124,10 @@ public class DoctorPanelHome extends javax.swing.JPanel {
         //jSplitPaneDoctorPanel.setRightComponent(encounterDoctor);
 
     }//GEN-LAST:event_btnCreateEncounterActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

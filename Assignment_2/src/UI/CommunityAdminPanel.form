@@ -83,14 +83,14 @@
         <Component class="javax.swing.JTextField" name="txtCommunityAdminUsername">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="282" y="151" width="148" height="-1"/>
+              <AbsoluteConstraints x="282" y="151" width="170" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCommunityAdminPassword">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="282" y="199" width="148" height="-1"/>
+              <AbsoluteConstraints x="282" y="199" width="170" height="30"/>
             </Constraint>
           </Constraints>
         </Component>

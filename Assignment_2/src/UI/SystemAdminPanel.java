@@ -56,6 +56,9 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         btnDoctorsDirectory = new javax.swing.JButton();
         btnPatientDirectory = new javax.swing.JButton();
         btnEncountersDirectory = new javax.swing.JButton();
+        btnCityDirectory = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         viewPanelSystemAdmin = new javax.swing.JPanel();
         hospitalDirectoryPanel = new javax.swing.JPanel();
         jSplitPaneHospitalDirectory = new javax.swing.JSplitPane();
@@ -81,7 +84,26 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         btnAddEncounter = new javax.swing.JButton();
         btnViewEncounter = new javax.swing.JButton();
         viewPanelEncountersDirectory = new javax.swing.JPanel();
+        cityDirectoryPanel = new javax.swing.JPanel();
+        splitPaneCityDirectory = new javax.swing.JSplitPane();
+        controlPanelCityDirectory = new javax.swing.JPanel();
+        btnCreateCity = new javax.swing.JButton();
+        btnViewCity = new javax.swing.JButton();
+        viewPanelCityDirectory = new javax.swing.JPanel();
+        houseDirectoryPanel = new javax.swing.JPanel();
+        splitPaneHouseDirectory = new javax.swing.JSplitPane();
+        controlPanelHouseDirectory = new javax.swing.JPanel();
+        btnCreateHouse = new javax.swing.JButton();
+        btnViewHouse = new javax.swing.JButton();
+        viewPanelHouseDirectory = new javax.swing.JPanel();
+        communityDirectoryPanel = new javax.swing.JPanel();
+        splitPaneCommunityDirectory = new javax.swing.JSplitPane();
+        controlPanelCommunityDirectroy = new javax.swing.JPanel();
+        btnCreateCommunity = new javax.swing.JButton();
+        btnViewCommunity = new javax.swing.JButton();
+        ViewPanelCommunityDirectory = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new java.awt.CardLayout());
 
         hospitalAdminLoginPanel.setBackground(new java.awt.Color(153, 153, 255));
@@ -124,6 +146,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
 
         jSplitPaneHospitalAdmin.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
+        controlPanelSystemAdmin.setBackground(new java.awt.Color(153, 204, 255));
+
         btnHospitlaDirectory.setText("Hospital Directory");
         btnHospitlaDirectory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,19 +176,49 @@ public class SystemAdminPanel extends javax.swing.JPanel {
             }
         });
 
+        btnCityDirectory.setText("City Directory");
+        btnCityDirectory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCityDirectoryActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Community Directory");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("House Directory");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlPanelSystemAdminLayout = new javax.swing.GroupLayout(controlPanelSystemAdmin);
         controlPanelSystemAdmin.setLayout(controlPanelSystemAdminLayout);
         controlPanelSystemAdminLayout.setHorizontalGroup(
             controlPanelSystemAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelSystemAdminLayout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(btnHospitlaDirectory)
-                .addGap(52, 52, 52)
-                .addComponent(btnDoctorsDirectory)
-                .addGap(39, 39, 39)
-                .addComponent(btnPatientDirectory)
-                .addGap(34, 34, 34)
-                .addComponent(btnEncountersDirectory)
+                .addGroup(controlPanelSystemAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(controlPanelSystemAdminLayout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(btnHospitlaDirectory)
+                        .addGap(52, 52, 52)
+                        .addComponent(btnDoctorsDirectory)
+                        .addGap(39, 39, 39)
+                        .addComponent(btnPatientDirectory)
+                        .addGap(34, 34, 34)
+                        .addComponent(btnEncountersDirectory))
+                    .addGroup(controlPanelSystemAdminLayout.createSequentialGroup()
+                        .addGap(222, 222, 222)
+                        .addComponent(btnCityDirectory)
+                        .addGap(44, 44, 44)
+                        .addComponent(jButton1)
+                        .addGap(32, 32, 32)
+                        .addComponent(jButton2)))
                 .addContainerGap(289, Short.MAX_VALUE))
         );
         controlPanelSystemAdminLayout.setVerticalGroup(
@@ -176,12 +230,22 @@ public class SystemAdminPanel extends javax.swing.JPanel {
                     .addComponent(btnDoctorsDirectory)
                     .addComponent(btnPatientDirectory)
                     .addComponent(btnEncountersDirectory))
-                .addGap(35, 35, 35))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(controlPanelSystemAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCityDirectory)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap())
         );
 
         jSplitPaneHospitalAdmin.setTopComponent(controlPanelSystemAdmin);
 
+        viewPanelSystemAdmin.setBackground(new java.awt.Color(153, 204, 255));
         viewPanelSystemAdmin.setLayout(new java.awt.CardLayout());
+
+        hospitalDirectoryPanel.setBackground(new java.awt.Color(153, 204, 255));
+
+        controlPanelHospitalDirectory.setBackground(new java.awt.Color(153, 204, 255));
 
         btnCreateHospital.setText("Create Hospital");
         btnCreateHospital.addActionListener(new java.awt.event.ActionListener() {
@@ -222,6 +286,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
 
         jSplitPaneHospitalDirectory.setLeftComponent(controlPanelHospitalDirectory);
 
+        viewPanelHospitalDirectory.setBackground(new java.awt.Color(153, 204, 255));
+
         javax.swing.GroupLayout viewPanelHospitalDirectoryLayout = new javax.swing.GroupLayout(viewPanelHospitalDirectory);
         viewPanelHospitalDirectory.setLayout(viewPanelHospitalDirectoryLayout);
         viewPanelHospitalDirectoryLayout.setHorizontalGroup(
@@ -249,6 +315,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         );
 
         viewPanelSystemAdmin.add(hospitalDirectoryPanel, "hospitalDirectoryPanel");
+
+        controlPanelDoctorsDirectory.setBackground(new java.awt.Color(153, 204, 255));
 
         btnAddDoctor.setText("Add Doctor");
         btnAddDoctor.addActionListener(new java.awt.event.ActionListener() {
@@ -287,6 +355,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
 
         jSplitPaneDoctorsDirectory.setLeftComponent(controlPanelDoctorsDirectory);
 
+        viewPanelDoctorsDirectory.setBackground(new java.awt.Color(153, 204, 255));
+
         javax.swing.GroupLayout viewPanelDoctorsDirectoryLayout = new javax.swing.GroupLayout(viewPanelDoctorsDirectory);
         viewPanelDoctorsDirectory.setLayout(viewPanelDoctorsDirectoryLayout);
         viewPanelDoctorsDirectoryLayout.setHorizontalGroup(
@@ -317,6 +387,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         );
 
         viewPanelSystemAdmin.add(DoctorsDirectoryPanel, "DoctorsDirectoryPanel");
+
+        controlPanelPatientDirectroy.setBackground(new java.awt.Color(153, 204, 255));
 
         btnAddPatient.setText("Add Patient");
         btnAddPatient.addActionListener(new java.awt.event.ActionListener() {
@@ -355,6 +427,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
 
         jSplitPanePatientDirectory.setLeftComponent(controlPanelPatientDirectroy);
 
+        viewPanelPatientDirectroy.setBackground(new java.awt.Color(153, 204, 255));
+
         javax.swing.GroupLayout viewPanelPatientDirectroyLayout = new javax.swing.GroupLayout(viewPanelPatientDirectroy);
         viewPanelPatientDirectroy.setLayout(viewPanelPatientDirectroyLayout);
         viewPanelPatientDirectroyLayout.setHorizontalGroup(
@@ -385,6 +459,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         );
 
         viewPanelSystemAdmin.add(PatientDirectoryPanel, "PatientDirectoryPanel");
+
+        controlPanelEncountersDirectory.setBackground(new java.awt.Color(153, 204, 255));
 
         btnAddEncounter.setText("Add Encounter");
         btnAddEncounter.addActionListener(new java.awt.event.ActionListener() {
@@ -423,6 +499,8 @@ public class SystemAdminPanel extends javax.swing.JPanel {
 
         jSplitPaneEncountersDirectory.setLeftComponent(controlPanelEncountersDirectory);
 
+        viewPanelEncountersDirectory.setBackground(new java.awt.Color(153, 204, 255));
+
         javax.swing.GroupLayout viewPanelEncountersDirectoryLayout = new javax.swing.GroupLayout(viewPanelEncountersDirectory);
         viewPanelEncountersDirectory.setLayout(viewPanelEncountersDirectoryLayout);
         viewPanelEncountersDirectoryLayout.setHorizontalGroup(
@@ -448,6 +526,223 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         );
 
         viewPanelSystemAdmin.add(EncounterDirectoryPanel, "EncounterDirectoryPanel");
+
+        controlPanelCityDirectory.setBackground(new java.awt.Color(153, 204, 255));
+
+        btnCreateCity.setText("Create City");
+        btnCreateCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateCityActionPerformed(evt);
+            }
+        });
+
+        btnViewCity.setText("View City");
+        btnViewCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewCityActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout controlPanelCityDirectoryLayout = new javax.swing.GroupLayout(controlPanelCityDirectory);
+        controlPanelCityDirectory.setLayout(controlPanelCityDirectoryLayout);
+        controlPanelCityDirectoryLayout.setHorizontalGroup(
+            controlPanelCityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelCityDirectoryLayout.createSequentialGroup()
+                .addGroup(controlPanelCityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(controlPanelCityDirectoryLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnCreateCity))
+                    .addGroup(controlPanelCityDirectoryLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(btnViewCity)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        controlPanelCityDirectoryLayout.setVerticalGroup(
+            controlPanelCityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelCityDirectoryLayout.createSequentialGroup()
+                .addGap(128, 128, 128)
+                .addComponent(btnCreateCity)
+                .addGap(69, 69, 69)
+                .addComponent(btnViewCity)
+                .addContainerGap(368, Short.MAX_VALUE))
+        );
+
+        splitPaneCityDirectory.setLeftComponent(controlPanelCityDirectory);
+
+        viewPanelCityDirectory.setBackground(new java.awt.Color(153, 204, 255));
+
+        javax.swing.GroupLayout viewPanelCityDirectoryLayout = new javax.swing.GroupLayout(viewPanelCityDirectory);
+        viewPanelCityDirectory.setLayout(viewPanelCityDirectoryLayout);
+        viewPanelCityDirectoryLayout.setHorizontalGroup(
+            viewPanelCityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 936, Short.MAX_VALUE)
+        );
+        viewPanelCityDirectoryLayout.setVerticalGroup(
+            viewPanelCityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 611, Short.MAX_VALUE)
+        );
+
+        splitPaneCityDirectory.setRightComponent(viewPanelCityDirectory);
+
+        javax.swing.GroupLayout cityDirectoryPanelLayout = new javax.swing.GroupLayout(cityDirectoryPanel);
+        cityDirectoryPanel.setLayout(cityDirectoryPanelLayout);
+        cityDirectoryPanelLayout.setHorizontalGroup(
+            cityDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cityDirectoryPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneCityDirectory))
+        );
+        cityDirectoryPanelLayout.setVerticalGroup(
+            cityDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPaneCityDirectory)
+        );
+
+        viewPanelSystemAdmin.add(cityDirectoryPanel, "cityDirectoryPanel");
+
+        houseDirectoryPanel.setBackground(new java.awt.Color(153, 204, 255));
+
+        controlPanelHouseDirectory.setBackground(new java.awt.Color(153, 204, 255));
+
+        btnCreateHouse.setText("Create House");
+        btnCreateHouse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateHouseActionPerformed(evt);
+            }
+        });
+
+        btnViewHouse.setText("View House");
+        btnViewHouse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewHouseActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout controlPanelHouseDirectoryLayout = new javax.swing.GroupLayout(controlPanelHouseDirectory);
+        controlPanelHouseDirectory.setLayout(controlPanelHouseDirectoryLayout);
+        controlPanelHouseDirectoryLayout.setHorizontalGroup(
+            controlPanelHouseDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelHouseDirectoryLayout.createSequentialGroup()
+                .addComponent(btnCreateHouse)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(controlPanelHouseDirectoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnViewHouse)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        controlPanelHouseDirectoryLayout.setVerticalGroup(
+            controlPanelHouseDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelHouseDirectoryLayout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(btnCreateHouse)
+                .addGap(61, 61, 61)
+                .addComponent(btnViewHouse)
+                .addContainerGap(338, Short.MAX_VALUE))
+        );
+
+        splitPaneHouseDirectory.setLeftComponent(controlPanelHouseDirectory);
+
+        viewPanelHouseDirectory.setBackground(new java.awt.Color(153, 204, 255));
+
+        javax.swing.GroupLayout viewPanelHouseDirectoryLayout = new javax.swing.GroupLayout(viewPanelHouseDirectory);
+        viewPanelHouseDirectory.setLayout(viewPanelHouseDirectoryLayout);
+        viewPanelHouseDirectoryLayout.setHorizontalGroup(
+            viewPanelHouseDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 772, Short.MAX_VALUE)
+        );
+        viewPanelHouseDirectoryLayout.setVerticalGroup(
+            viewPanelHouseDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 605, Short.MAX_VALUE)
+        );
+
+        splitPaneHouseDirectory.setRightComponent(viewPanelHouseDirectory);
+
+        javax.swing.GroupLayout houseDirectoryPanelLayout = new javax.swing.GroupLayout(houseDirectoryPanel);
+        houseDirectoryPanel.setLayout(houseDirectoryPanelLayout);
+        houseDirectoryPanelLayout.setHorizontalGroup(
+            houseDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(houseDirectoryPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneHouseDirectory, javax.swing.GroupLayout.PREFERRED_SIZE, 881, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        houseDirectoryPanelLayout.setVerticalGroup(
+            houseDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(houseDirectoryPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneHouseDirectory))
+        );
+
+        viewPanelSystemAdmin.add(houseDirectoryPanel, "houseDirectoryPanel");
+
+        controlPanelCommunityDirectroy.setBackground(new java.awt.Color(153, 204, 255));
+
+        btnCreateCommunity.setText("Create Community");
+        btnCreateCommunity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateCommunityActionPerformed(evt);
+            }
+        });
+
+        btnViewCommunity.setText("View Community");
+        btnViewCommunity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewCommunityActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout controlPanelCommunityDirectroyLayout = new javax.swing.GroupLayout(controlPanelCommunityDirectroy);
+        controlPanelCommunityDirectroy.setLayout(controlPanelCommunityDirectroyLayout);
+        controlPanelCommunityDirectroyLayout.setHorizontalGroup(
+            controlPanelCommunityDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelCommunityDirectroyLayout.createSequentialGroup()
+                .addGroup(controlPanelCommunityDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(controlPanelCommunityDirectroyLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnCreateCommunity))
+                    .addGroup(controlPanelCommunityDirectroyLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(btnViewCommunity)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        controlPanelCommunityDirectroyLayout.setVerticalGroup(
+            controlPanelCommunityDirectroyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelCommunityDirectroyLayout.createSequentialGroup()
+                .addGap(166, 166, 166)
+                .addComponent(btnCreateCommunity)
+                .addGap(52, 52, 52)
+                .addComponent(btnViewCommunity)
+                .addContainerGap(347, Short.MAX_VALUE))
+        );
+
+        splitPaneCommunityDirectory.setLeftComponent(controlPanelCommunityDirectroy);
+
+        ViewPanelCommunityDirectory.setBackground(new java.awt.Color(153, 204, 255));
+
+        javax.swing.GroupLayout ViewPanelCommunityDirectoryLayout = new javax.swing.GroupLayout(ViewPanelCommunityDirectory);
+        ViewPanelCommunityDirectory.setLayout(ViewPanelCommunityDirectoryLayout);
+        ViewPanelCommunityDirectoryLayout.setHorizontalGroup(
+            ViewPanelCommunityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 896, Short.MAX_VALUE)
+        );
+        ViewPanelCommunityDirectoryLayout.setVerticalGroup(
+            ViewPanelCommunityDirectoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 611, Short.MAX_VALUE)
+        );
+
+        splitPaneCommunityDirectory.setRightComponent(ViewPanelCommunityDirectory);
+
+        javax.swing.GroupLayout communityDirectoryPanelLayout = new javax.swing.GroupLayout(communityDirectoryPanel);
+        communityDirectoryPanel.setLayout(communityDirectoryPanelLayout);
+        communityDirectoryPanelLayout.setHorizontalGroup(
+            communityDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPaneCommunityDirectory)
+        );
+        communityDirectoryPanelLayout.setVerticalGroup(
+            communityDirectoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPaneCommunityDirectory)
+        );
+
+        viewPanelSystemAdmin.add(communityDirectoryPanel, "communityDirectoryPanel");
 
         jSplitPaneHospitalAdmin.setRightComponent(viewPanelSystemAdmin);
 
@@ -546,31 +841,98 @@ public class SystemAdminPanel extends javax.swing.JPanel {
         jSplitPaneEncountersDirectory.setRightComponent(viewEncounters);
     }//GEN-LAST:event_btnViewEncounterActionPerformed
 
+    private void btnCreateCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateCityActionPerformed
+        // TODO add your handling code here:
+        CreateCityPanel createCity = new CreateCityPanel(sysAdmin);
+        splitPaneCityDirectory.setRightComponent(createCity);
+    }//GEN-LAST:event_btnCreateCityActionPerformed
+
+    private void btnViewCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewCityActionPerformed
+        // TODO add your handling code here:
+        ViewCityPanel viewCities = new ViewCityPanel(sysAdmin);
+        splitPaneCityDirectory.setRightComponent(viewCities);
+    }//GEN-LAST:event_btnViewCityActionPerformed
+
+    private void btnCreateHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateHouseActionPerformed
+        // TODO add your handling code here:
+        CreateHousePanel house = new CreateHousePanel(sysAdmin);
+        splitPaneHouseDirectory.setRightComponent(house);
+    }//GEN-LAST:event_btnCreateHouseActionPerformed
+
+    private void btnViewHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHouseActionPerformed
+        // TODO add your handling code here:
+        ViewHousePanel house = new ViewHousePanel(sysAdmin);
+        splitPaneHouseDirectory.setRightComponent(house);
+    }//GEN-LAST:event_btnViewHouseActionPerformed
+
+    private void btnCreateCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateCommunityActionPerformed
+        // TODO add your handling code here:
+        CreateCommunityPanel createCommunity = new CreateCommunityPanel(sysAdmin);
+        splitPaneCommunityDirectory.setRightComponent(createCommunity);
+    }//GEN-LAST:event_btnCreateCommunityActionPerformed
+
+    private void btnViewCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewCommunityActionPerformed
+        // TODO add your handling code here:
+        ViewCommunityPanel viewCommunity = new ViewCommunityPanel(sysAdmin);
+        splitPaneCommunityDirectory.setRightComponent(viewCommunity);
+    }//GEN-LAST:event_btnViewCommunityActionPerformed
+
+    private void btnCityDirectoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCityDirectoryActionPerformed
+        // TODO add your handling code here:
+        cardLayoutSystemAdmin.show(viewPanelSystemAdmin, "cityDirectoryPanel");
+    }//GEN-LAST:event_btnCityDirectoryActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        cardLayoutSystemAdmin.show(viewPanelSystemAdmin, "communityDirectoryPanel");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        cardLayoutSystemAdmin.show(viewPanelSystemAdmin, "houseDirectoryPanel");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel DoctorsDirectoryPanel;
     private javax.swing.JPanel EncounterDirectoryPanel;
     private javax.swing.JPanel PatientDirectoryPanel;
+    private javax.swing.JPanel ViewPanelCommunityDirectory;
     private javax.swing.JButton btnAddDoctor;
     private javax.swing.JButton btnAddEncounter;
     private javax.swing.JButton btnAddPatient;
+    private javax.swing.JButton btnCityDirectory;
+    private javax.swing.JButton btnCreateCity;
+    private javax.swing.JButton btnCreateCommunity;
     private javax.swing.JButton btnCreateHospital;
+    private javax.swing.JButton btnCreateHouse;
     private javax.swing.JButton btnDoctorsDirectory;
     private javax.swing.JButton btnEncountersDirectory;
     private javax.swing.JButton btnHospitlaDirectory;
     private javax.swing.JButton btnPatientDirectory;
     private javax.swing.JButton btnSystemAdminLogin;
+    private javax.swing.JButton btnViewCity;
+    private javax.swing.JButton btnViewCommunity;
     private javax.swing.JButton btnViewDoctors;
     private javax.swing.JButton btnViewEncounter;
     private javax.swing.JButton btnViewHospital;
+    private javax.swing.JButton btnViewHouse;
     private javax.swing.JButton btnViewPatient;
+    private javax.swing.JPanel cityDirectoryPanel;
+    private javax.swing.JPanel communityDirectoryPanel;
+    private javax.swing.JPanel controlPanelCityDirectory;
+    private javax.swing.JPanel controlPanelCommunityDirectroy;
     private javax.swing.JPanel controlPanelDoctorsDirectory;
     private javax.swing.JPanel controlPanelEncountersDirectory;
     private javax.swing.JPanel controlPanelHospitalDirectory;
+    private javax.swing.JPanel controlPanelHouseDirectory;
     private javax.swing.JPanel controlPanelPatientDirectroy;
     private javax.swing.JPanel controlPanelSystemAdmin;
     private javax.swing.JPanel hospitalAdminLoginPanel;
     private javax.swing.JPanel hospitalDirectoryPanel;
+    private javax.swing.JPanel houseDirectoryPanel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -580,11 +942,16 @@ public class SystemAdminPanel extends javax.swing.JPanel {
     private javax.swing.JSplitPane jSplitPaneHospitalAdmin;
     private javax.swing.JSplitPane jSplitPaneHospitalDirectory;
     private javax.swing.JSplitPane jSplitPanePatientDirectory;
+    private javax.swing.JSplitPane splitPaneCityDirectory;
+    private javax.swing.JSplitPane splitPaneCommunityDirectory;
+    private javax.swing.JSplitPane splitPaneHouseDirectory;
     private javax.swing.JPasswordField txtSystemAdminPassword;
     private javax.swing.JTextField txtSystemAdminUsername;
+    private javax.swing.JPanel viewPanelCityDirectory;
     private javax.swing.JPanel viewPanelDoctorsDirectory;
     private javax.swing.JPanel viewPanelEncountersDirectory;
     private javax.swing.JPanel viewPanelHospitalDirectory;
+    private javax.swing.JPanel viewPanelHouseDirectory;
     private javax.swing.JPanel viewPanelPatientDirectroy;
     private javax.swing.JPanel viewPanelSystemAdmin;
     // End of variables declaration//GEN-END:variables

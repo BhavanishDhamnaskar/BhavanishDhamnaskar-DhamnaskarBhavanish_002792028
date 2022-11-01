@@ -94,9 +94,9 @@ public class CommunityAdminPanel extends javax.swing.JPanel {
         communityAdminLoginPanel.add(lblCommunityAdminPassword);
         lblCommunityAdminPassword.setBounds(190, 200, 80, 20);
         communityAdminLoginPanel.add(txtCommunityAdminUsername);
-        txtCommunityAdminUsername.setBounds(282, 151, 148, 22);
+        txtCommunityAdminUsername.setBounds(282, 151, 170, 30);
         communityAdminLoginPanel.add(txtCommunityAdminPassword);
-        txtCommunityAdminPassword.setBounds(282, 199, 148, 22);
+        txtCommunityAdminPassword.setBounds(282, 199, 170, 30);
 
         btnCommunityAdminLogin.setText("Login");
         btnCommunityAdminLogin.addActionListener(new java.awt.event.ActionListener() {
